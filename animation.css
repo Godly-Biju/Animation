@@ -1,0 +1,81 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+} 
+
+#d1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    background-color: red;    
+    animation: example 4s infinite,rotateAndslide 8s infinite ;
+        
+}
+@keyframes example{
+    from{background-color: red;}
+    to{background-color: yellow;}
+}
+@keyframes rotateAndslide{
+    0%{
+        transform:  translateX(-400px) rotate(0deg) ;
+        /* rotateX
+           rotateY 
+           rotateZ
+           rotateX(360deg) */
+    }
+    50%{
+        transform:  translateX(400px) rotate(360deg);
+    }
+    100%{
+        transform:  translateX(-400px)  rotate(0deg);
+    }
+    
+}
+
+#d2{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    color:white;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20%;
+    animation: slide 5s infinite,display 4s infinite;
+    
+    
+    
+}
+@keyframes display{
+    0%{
+        background-color: green;
+    }
+    50%{
+        background-color: blue;
+    }
+    100%{
+        background-color: green;
+    }
+}
+@keyframes slide{
+    0%{
+        transform: rotate(45deg);
+    }
+    10%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: translateX(400px);
+    }
+    100%{
+        transform:translateX(0px) rotate(-360deg);
+    }
+
+    
+}
